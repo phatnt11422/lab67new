@@ -1,0 +1,60 @@
+.form-signup {
+    font-size: 18px;
+    display: block;
+    text-align: center;
+    color: #ffffff;
+    opacity: 0.9;
+    text-decoration: none;
+    margin-top: 10px;
+}
+
+.form-signup:hover, .form-signup:active {
+    opacity: 1;
+    text-decoration: none;
+    color: #000000;
+}
+
+.d-flex .form-control {
+    width: 160px !important;
+    height: 42px !important;
+}
+
+.d-flex .btn {
+    color: #ffffff !important;
+    border-color: #ffffff !important;
+}
+
+.img-main {
+    width: 100% !important;
+    height: 100% !important;
+}
+
+.text-center,.img-main-key {
+    margin-top: -10px !important;
+}
+
+.main-cl {
+    color: #208f8f !important;
+}
+
+.main-table {
+    text-align: center;
+    color: #ffffff;
+}
+
+.table-content {
+    color: #ffffff;
+}
+
+.img-user {
+    width: 70px;
+    height: 70px;
+}
+
+.add-content {
+    margin-bottom: 20px;
+}
+ .btn-outline-success {
+     color: #ffffff !important;
+     border-color: #ffffff !important;
+ }

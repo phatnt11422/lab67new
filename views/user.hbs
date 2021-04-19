@@ -1,0 +1,69 @@
+<header class="header-dark">
+    <nav class="navbar navbar-dark navbar-expand-lg navigation-clean-search">
+        <div class="container">
+            <a class="navbar-brand" href="/"><span class="main-cl">Home</span></a>
+            <div class="collapse navbar-collapse" id="navcol-1">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="navbar-brand" href="/users">User</a>
+                    </li>
+                </ul>
+                <form class="form-inline mr-auto" target="_self">
+                    <div class="form-group">
+                        <input id="search-field" class="form-control me-2 search-field" type="search" placeholder="Họ tên"
+                               aria-label="Search" name="search">
+                    </div>
+                    <button id="btnSearch" class="btn btn-outline-success" type="submit">Search</button>
+                </form>
+                <span class="navbar-text">
+                        <a class="login" href="/">Log Out</a>
+                    </span>
+                <a class="btn btn-light action-button" role="button" href="">User</a>
+            </div>
+        </div>
+    </nav>
+    <div class="container hero">
+        <div class="row">
+
+            <form method="get" action="/addusers">
+                <button class="add-content" type="submit">Thêm</button>
+            </form>
+
+            <table class="table table-bordered">
+                <thead  class="main-table">
+                <tr>
+                    <th scope="col"><center>Avatar</center></th>
+                    <th scope="col">Họ tên</th>
+                    <th scope="col">Ngày Sinh</th>
+                    <th scope="col">Giới tính</th>
+                    <th scope="col">Số điện thoại</th>
+                    <th scope="col">Sở thích</th>
+                    <th scope="col"></th>
+                </tr>
+                </thead>
+                <tbody class="listUser" >
+                {{#each users}}
+                    <tr>
+                        <td><img height="100" width="100" src="{{this.avatar}}"></td>
+                        <td>{{this.name}}</td>
+                        <td>{{this.date}}</td>
+                        <td>{{this.sex}}</td>
+                        <td>{{this.phone}}</td>
+                        <td>{{this.hobby}}</td>
+                        <td>
+                            <form action="/updateusers" method="get">
+                                <button type="submit" name="_id" value="{{this._id}}">Update</button>
+                            </form>
+                            <form action="/deleteUsers" method="post">
+                                <button type="submit" name="_id" value="{{this._id}}">Delete</button>
+                            </form>
+                        </td>
+                    </tr>
+                {{/each}}
+                </tbody>
+            </table>
+        </div>
+    </div>
+</header>
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/bootstrap/js/bootstrap.min.js"></script>
