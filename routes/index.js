@@ -134,9 +134,10 @@ router.post("/deleteUsers", function (req, res, next) {
             console.log(err)
         }
         else {
-            connectUser.find({}).then(users => {
-                res.render("user", { text: "List Delete", users: users.map(obj => obj.toJSON(obj)) })
-            })
+            res.redirect('/user')
+            // connectUser.find({}).then(users => {
+            //     res.render("user", { text: "List Delete", users: users.map(obj => obj.toJSON(obj)) })
+            // })
         }
     })
 })
